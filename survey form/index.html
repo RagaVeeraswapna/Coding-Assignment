@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Survey Form</title>
+</head>
+<body>
+    <div class="blue-container">
+        <h1 style="color: white;">Survey Form</h1>
+        <div class="white-container">
+            <form id="surveyForm">
+                <div class="form-group">
+                    <div class="side-by-side">
+                        <div class="form-group">
+                            <label for="firstName">First Name:</label>
+                            <input type="text" id="firstName" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="lastName">Last Name:</label>
+                            <input type="text" id="lastName" required>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="side-by-side">
+                    <div class="form-group">
+                        <label for="dob">Date of Birth:</label>
+                        <input type="date" id="dob" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="country">Country:</label>
+                    <select id="country" required>
+                        <option value="">Select a country</option>
+                        <option value="usa">USA</option>
+                        <option value="canada">Canada</option>
+                        <option value="uk">UK</option>
+                        <option value="india">India</option>
+                        <option value="australia">Australia</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+                
+                <div class="form-group">
+                    <label>Gender:</label>
+                    <label>
+                        <input type="radio" name="gender" value="male" required> Male
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="female"> Female
+                    </label>
+                    <label>
+                        <input type="radio" name="gender" value="other"> Other
+                    </label>
+                </div>
+                <div class="form-group">
+                    <label for="profession">Profession:</label>
+                    <input type="text" id="profession" required>
+                </div>
+                <div class="form-group">
+                    <label for="mobile">Mobile Number:</label>
+                    <input type="number" id="mobile" required>
+                </div>
+                
+                <div class="form-group">
+                    <label>Languages:</label>
+                    <label>
+                        <input type="checkbox" name="languages" value="english"> English
+                    </label>
+                    <label>
+                        <input type="checkbox" name="languages" value="spanish"> Spanish
+                    </label>
+                    <label>
+                        <input type="checkbox" name="languages" value="french"> French
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label>Do you prefer tea or coffee?</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="question1" value="tea" required> Tea
+                        </label>
+                        <label>
+                            <input type="radio" name="question1" value="coffee"> Coffee
+                        </label>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <label>Do you like programming?</label>
+                    <div class="radio-group">
+                        <label>
+                            <input type="radio" name="question2" value="yes" required> Yes
+                        </label>
+                        <label>
+                            <input type="radio" name="question2" value="no"> No
+                        </label>
+                    </div>
+                </div> 
+                <div class="form-group">
+                    <label for="suggestions">Any suggestions?</label><br><br>
+                    <div>
+                        <textarea id="suggestions" rows="4"></textarea>
+                    </div>
+                </div>
+
+                <div class="form-group" style="text-align: center;">
+                    <button id="resetButton" type="button" onclick="resetForm()">Reset</button>
+                    <button id="submitButton" type="button" onclick="submitForm()">Submit</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="popup" id="popup">
+        <div class="popup-content">
+            <span class="close" onclick="closePopup()">&times;</span>
+            <h2>Survey Form Data</h2>
+            <div id="popupData"></div>
+            <button id="closePopup" onclick="closePopup()">Close</button>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
